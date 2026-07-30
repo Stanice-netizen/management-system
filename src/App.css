@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: #2563eb;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Dashboard */
+
+.dashboard-layout {
+  display: flex;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 220px;
+  background-color: white;
+  min-height: 100vh;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.sidebar a:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Search */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 800px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Course List */
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Course Card */
+
+.course-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.course-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.course-info {
+  padding: 15px;
+}
+
+.course-info h3 {
+  margin-bottom: 10px;
+}
+
+.course-info p {
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* Buttons */
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.favorite-btn {
+  background-color: #16a34a;
+}
+
+.favorite-btn:hover {
+  background-color: #15803d;
+}
+
+/* Course Details */
+
+.details {
+  background: white;
+  width: 70%;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.details img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.details p {
+  margin: 10px 0;
+}
+
+/* Loader */
+
+.loader,
+.error,
+.not-found {
+  text-align: center;
+  padding: 40px;
+}
