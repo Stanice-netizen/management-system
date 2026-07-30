@@ -5,9 +5,7 @@ function useFavorites() {
 
   function toggleFavorite(id) {
     if (favorites.includes(id)) {
-      setFavorites(
-        favorites.filter((favorite) => favorite !== id)
-      );
+      setFavorites(favorites.filter((favorite) => favorite !== id));
     } else {
       setFavorites([...favorites, id]);
     }
