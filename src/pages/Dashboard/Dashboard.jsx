@@ -32,7 +32,9 @@ function Dashboard() {
         <Sidebar />
 
         <main className="dashboard-content">
-          <SearchBar search={search} setSearch={setSearch} />
+          <div className="search-container">
+            <SearchBar search={search} setSearch={setSearch} />
+          </div>
 
           <CourseList
             courses={filteredCourses}
