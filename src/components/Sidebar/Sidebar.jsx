@@ -1,5 +1,4 @@
 import { NavLink } from "react-router";
-// import "./Sidebar.css";
 
 function Sidebar() {
   return (
