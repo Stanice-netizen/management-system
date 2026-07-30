@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import coursesData from "../data/courses";
+import { getCourses } from "../services/api";
 
 function useCourses() {
   const [courses, setCourses] = useState([]);
@@ -7,13 +7,18 @@ function useCourses() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    try {
-      setCourses(coursesData);
-    } catch (err) {
-      setError("Failed to load courses.");
-    } finally {
-      setLoading(false);
+    async function fetchCourses() {
+      try {
+        const data = await getCourses();
+        setCourses(data);
+      } catch (err) {
+        setError("Failed to load courses.");
+      } finally {
+        setLoading(false);
+      }
     }
+
+    fetchCourses();
   }, []);
 
   return {
